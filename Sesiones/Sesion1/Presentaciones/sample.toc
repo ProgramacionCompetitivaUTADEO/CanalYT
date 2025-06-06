@@ -1,9 +1,0 @@
-\babel@toc {spanish}{}\relax 
-\beamer@sectionintoc {1}{Recapitulación}{2}{0}{1}
-\beamer@sectionintoc {2}{Modificación clase \textit {Campesino}}{4}{0}{2}
-\beamer@sectionintoc {3}{Creación clase \textit {GrupoArmado}}{6}{0}{3}
-\beamer@sectionintoc {4}{Lógica (diagrama de flujo)}{8}{0}{4}
-\beamer@sectionintoc {5}{Resultados}{10}{0}{5}
-\beamer@sectionintoc {6}{Conclusiones}{16}{0}{6}
-\beamer@sectionintoc {7}{Licencia proyecto}{18}{0}{7}
-\beamer@sectionintoc {8}{Referencias}{20}{0}{8}

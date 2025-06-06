@@ -14,6 +14,41 @@
 \usepackage{xurl}
 \usepackage{cancel}
 \usepackage{svg}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Define colors
+\definecolor{codebg}{rgb}{0.95,0.95,0.95}
+\definecolor{commentcolor}{rgb}{0.0,0.5,0.0}
+\definecolor{keywordcolor}{rgb}{0.0,0.0,0.8}
+\definecolor{stringcolor}{rgb}{0.58,0.0,0.82}
+
+% Define C++ style
+\lstdefinestyle{cppstyle}{
+    language=C++,
+    backgroundcolor=\color{codebg},
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{keywordcolor}\bfseries,
+    stringstyle=\color{stringcolor},
+    commentstyle=\color{commentcolor}\itshape,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=8pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    frame=single,
+    tabsize=4,
+    breaklines=true,
+    breakatwhitespace=true,
+    captionpos=b,
+    morekeywords={endl}
+}
+
+% Define a new inline command using your cppstyle
+\newcommand{\cppinline}[1]{\lstinline[style=cppstyle]!#1!}
+
 
 \addbibresource{referencias.bib}  % Make sure your .bib file is correctly named
 
@@ -49,11 +84,44 @@
 \begin{frame}
   \frametitle{Problema 1}
 
-  Dada una cadena, \textbf{exp}, que puede constar
+  Dada una cadena, \textbf{exp}, que puede constar de paréntesis de apertura y cierre, su tarea es comprobar si la cadena contiene paréntesis válidos.
+
+  Las condiciones para validar son las siguientes:
+
+  \begin{itemize}
+    \item Todo paréntesis de apertura debe cerrarse con el mismo tipo de paréntesis.
+          \begin{itemize}
+            \item Por lo tanto, y como ejemplo, las cadenas \cppinline{\{) } y \cppinline{[ ( ])} no son válidas.
+          \end{itemize}
+    \item Cada paréntesis de apertura debe cerrarse en el orden correcto.
+          \begin{itemize}
+            \item Por lo tanto, y como ejemplo, \cppinline{)(} y \cppinline{()(()} no son válidos.
+          \end{itemize}
+  \end{itemize}
+
+  \textbf{Restricciones}
+
+  \begin{itemize}
+    \item \cppinline{1 <= exp.length <= 10^3}
+    \item La cadena solo contendrá los siguientes caracteres: \cppinline{(, ), [, ], \{} y \cppinline{\} }
+  \end{itemize}
 
 \end{frame}
 
+\begin{frame}
+  \frametitle{Problema 1 | Tests}
 
+  \begin{table}[h]
+    \centering
+    \begin{tabular}[h]{|c|c|}
+      \hline
+      \textbf{Entrada} & \textbf{Salida} \\ \hline
+      \cppinline{exp = \{\}[]()} & \cppinline{True} \\ \hline
+      \cppinline{ exp = \{[[\}[]](])} & \cppinline{False} \\ \hline
+    \end{tabular}
+  \end{table}
+
+\end{frame}
 
 
 \section{Referencias}
