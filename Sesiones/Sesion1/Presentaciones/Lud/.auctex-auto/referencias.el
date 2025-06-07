@@ -4,6 +4,7 @@
  "referencias"
  (lambda ()
    (LaTeX-add-bibitems
-    "icpc2025"))
+    "icpc2025"
+    "weiss2020data"))
  '(or :bibtex :latex))
 

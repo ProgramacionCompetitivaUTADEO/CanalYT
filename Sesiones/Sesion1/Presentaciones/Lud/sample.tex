@@ -43,7 +43,7 @@
     breaklines=true,
     breakatwhitespace=true,
     captionpos=b,
-    morekeywords={endl}
+    morekeywords={endl,pop}
 }
 
 % Define a new inline command using your cppstyle
@@ -112,16 +112,168 @@
   \frametitle{Problema 1 | Tests}
 
   \begin{table}[h]
-    \centering
-    \begin{tabular}[h]{|c|c|}
-      \hline
-      \textbf{Entrada} & \textbf{Salida} \\ \hline
-      \cppinline{exp = \{\}[]()} & \cppinline{True} \\ \hline
-      \cppinline{ exp = \{[[\}[]](])} & \cppinline{False} \\ \hline
-    \end{tabular}
-  \end{table}
+  \centering
+  \Large  % or \Large, \small, etc.
+  \begin{tabular}[h]{|c|c|}
+    \hline
+    \textbf{Entrada} & \textbf{Salida} \\ \hline
+    \cppinline{exp = \{\}[]()} & \cppinline{True} \\ \hline
+    \cppinline{exp = \{[[\}[]](])} & \cppinline{False} \\ \hline
+    \cppinline{exp = [((]]([) } & \cppinline{False} \\ \hline
+    \cppinline{exp = \{\{\}\}()[[]]  } & \cppinline{True} \\ \hline
+    \cppinline{exp = \{\{\{} & \cppinline{False} \\ \hline
+  \end{tabular}
+\end{table}
+
 
 \end{frame}
+
+\begin{frame}
+  \frametitle{Solución}
+
+  Libro ``Data Structures and Algorithm Analysis''\cite{weiss2020data} capítulo 3 ``Lists, Stacks and Queues'' sección 3.6.3 ``Applications''.
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{img/Problema1Solucion.png}
+  \end{figure}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Pasos}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/Problema1-1.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Pasos}
+
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/Problema1-2.png}
+  \end{figure}
+    \end{column}
+
+    \begin{column}{.5\textwidth}
+      \begin{itemize}
+        \item ¿Es $i$ un símbolo abierto?
+        \item Sí, mover al \textit{stack}.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Pasos}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/Problema1-3.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Pasos}
+
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/Problema1-4.png}
+  \end{figure}
+    \end{column}
+
+    \begin{column}{.5\textwidth}
+      \begin{itemize}
+        \item ¿Es $i$ símbolo cerrado?
+        \item Sí, ¿Está vacía la cola?
+        \item No, hacer \cppinline{pop} al \textit{stack}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Pasos}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/Problema1-5.png}
+  \end{figure}
+\end{frame}
+
+
+
+
+\begin{frame}
+  \frametitle{Pasos}
+
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/Problema1-6.png}
+  \end{figure}
+    \end{column}
+
+    \begin{column}{.5\textwidth}
+      \begin{itemize}
+        \item ¿Está el \textit{stack} vacío?
+        \item Sí, devolver \cppinline{True}.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+
+\end{frame}
+
+\section{Diagrama de flujo}
+
+\insertsectionpage
+
+\begin{frame}
+  \frametitle{Diagrama de flujo}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/Problema1-7.png}
+  \end{figure}
+\end{frame}
+
+
+\section{Implementación En C++}
+
+\insertsectionpage
+
+\begin{frame}
+  \frametitle{Implementación en C++}
+
+ \scalebox{0.4}{\lstinputlisting[style=cppstyle]{Problema1.cpp}}
+
+\end{frame}
+
+\section{Complejidad temporal y espacial}
+
+\insertsectionpage
+
+\begin{frame}
+  \frametitle{Complejidad temporal y espacial}
+
+  \begin{itemize}
+    \item Temporal:
+          \[O(n)\]
+    \item Espacial:
+          \[O(n)\]
+  \end{itemize}
+
+\end{frame}
+
+
+
 
 
 \section{Referencias}
