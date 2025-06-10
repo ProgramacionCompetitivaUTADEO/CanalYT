@@ -1,9 +1,84 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0" version="27.1.4">
   <diagram name="Page-1" id="fuhJcxHv_VpycbfwJUJl">
-    <mxGraphModel>
+    <mxGraphModel dx="934" dy="591" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sLHALUaEl5OSU6PX1_0j-2" target="sLHALUaEl5OSU6PX1_0j-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-2" value="&lt;div&gt;Crear punteros:&lt;/div&gt;&lt;div&gt;- iter: referencia al nodo siguiente de la cabeza&lt;/div&gt;&lt;div&gt;- prev: referencia al nodo cabeza&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="99.5" y="99" width="159" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sLHALUaEl5OSU6PX1_0j-3" target="sLHALUaEl5OSU6PX1_0j-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-3" value="&lt;div&gt;Inicio programa&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="124" y="22" width="110" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sLHALUaEl5OSU6PX1_0j-5" target="sLHALUaEl5OSU6PX1_0j-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-5" value="&lt;div&gt;Iterar&lt;/div&gt;&lt;div&gt;i = 0&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="150.5" y="229" width="57" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sLHALUaEl5OSU6PX1_0j-7" target="sLHALUaEl5OSU6PX1_0j-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-15" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="sLHALUaEl5OSU6PX1_0j-10">
+          <mxGeometry x="-0.3659" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sLHALUaEl5OSU6PX1_0j-7" target="sLHALUaEl5OSU6PX1_0j-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-18" value="Sí" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="sLHALUaEl5OSU6PX1_0j-17">
+          <mxGeometry x="-0.0333" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-7" value="¿Es i &amp;lt; k-1?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="139" y="353" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sLHALUaEl5OSU6PX1_0j-9" target="sLHALUaEl5OSU6PX1_0j-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-9" value="&lt;div&gt;Hacer que el enlace de la cabeza sea iter&lt;/div&gt;&lt;div&gt;Hacer que la cabeza sea iter&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="119" y="472" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-11" value="Fin programa" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="124" y="563" width="110" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sLHALUaEl5OSU6PX1_0j-16" target="sLHALUaEl5OSU6PX1_0j-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-16" value="&lt;div&gt;Crear puntero:&lt;/div&gt;&lt;div&gt;- post: apunta al nodo siguiente de iter.&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="304" y="363" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sLHALUaEl5OSU6PX1_0j-19" target="sLHALUaEl5OSU6PX1_0j-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-19" value="Enlace del nodo iter pasa a apuntar a prev" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="502" y="359.5" width="129" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sLHALUaEl5OSU6PX1_0j-21" target="sLHALUaEl5OSU6PX1_0j-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-21" value="prev pasa a ser iter" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="506.5" y="216" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sLHALUaEl5OSU6PX1_0j-23" target="sLHALUaEl5OSU6PX1_0j-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="367" y="318" />
+              <mxPoint x="179" y="318" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sLHALUaEl5OSU6PX1_0j-23" value="&lt;div&gt;iter pasa a ser post&lt;/div&gt;&lt;div&gt;incrementar i en 1&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="306.5" y="216" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
