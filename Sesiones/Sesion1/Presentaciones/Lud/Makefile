@@ -2,22 +2,24 @@
 # Presentación Final
 #
 # @file
-# @version 0.1
+# @version 0.2
 
-all: sample.pdf
+TEX := ./sample.tex
+PDF := ./sample.pdf
+BASENAME := $(basename $(notdir $(TEX)))
 
-sample.pdf: sample.tex
-	lualatex --shell-escape sample.tex
-	biber sample
-	lualatex --shell-escape sample.tex
-	lualatex --shell-escape sample.tex
+all: $(PDF)
+
+$(PDF): $(TEX)
+	cd . && lualatex --shell-escape $(BASENAME).tex
+	cd . && biber $(BASENAME)
+	cd . && lualatex --shell-escape $(BASENAME).tex
+	cd . && lualatex --shell-escape $(BASENAME).tex
 
 clean:
-	rm -f sample.aux sample.bbl sample.bcf sample.blg \
-	      sample.log sample.out sample.run.xml \
-	      sample.toc sample.lof sample.lot
+	rm -f ./sample.aux ./sample.bbl ./sample.bcf \
+	      ./sample.blg ./sample.log ./sample.out \
+	      ./sample.run.xml ./sample.toc \
+	      ./sample.lof ./sample.lot
 
 .PHONY: all clean
-
-
-# end
