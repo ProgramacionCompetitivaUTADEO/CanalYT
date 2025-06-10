@@ -85,7 +85,7 @@
 \begin{frame}
   \frametitle{Problema 2}
 
-  Dada una \textbf{cola} y un número \textbf{k}, invierte el orden de los primeros \textbf{k} elementos de la \textbf{cola}. Si \textbf{k} es mejor que \textbf{0}, si \textbf{k} excede el tamaño de la \textbf{cola} o si la \textbf{cola} está vacía, se devuelve \textbf{NULL}. De lo contrario, se devuelve la \textbf{cola} modificada.
+  Dada una $\mathbf{cola}$ y un número $\mathbf{k}$, invierte el orden de los primeros $\mathbf{k}$ elementos de la $\mathbf{cola}$. Si $\mathbf{k}$ es mejor que $\mathbf{0}$, si $\mathbf{k}$ excede el tamaño de la $\mathbf{cola}$ o si la $\mathbf{cola}$ está vacía, se devuelve $\mathbf{NULL}$. De lo contrario, se devuelve la $\mathbf{cola}$ modificada.
 
   \textbf{Restricciones}
 
@@ -114,18 +114,276 @@
 
 \end{frame}
 
+\begin{frame}
+  \frametitle{Test 1}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig1.png}
+  \end{figure}
+
+\end{frame}
+
+
+
 \section{Solución}
 
 \insertsectionpage
 
+
+
 \begin{frame}
-  \frametitle{Solución}
+  \frametitle{Prerrequisitos}
+
+  \begin{itemize}
+    \item Se utiliza un algoritmo para invertir una lista enlazada.
+    \item Ejercicio recomendado: \url{https://leetcode.com/problems/reverse-linked-list/description/}
+    \item Solución explicada del ejercicio recomendado en: \url{https://github.com/ProgramacionCompetitivaUTADEO/Estructuras-De-Datos/tree/main/C\%2B\%2B/LinkedList/Ejercicios/LC206ReverseLinkedList}
+  \end{itemize}
+
+\end{frame}
 
 
-  Hola
+\begin{frame}
+  \frametitle{Diagrama de flujo}
+
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{img/fig2.png}
+  \end{figure}
 
 
 \end{frame}
+
+\begin{frame}
+  \frametitle{Funcionamiento del algoritmo}
+
+  \textbf{Cola inicial}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig3.png}
+  \end{figure}
+
+  Inicializar los punteros \cppinline{iter} y \cppinline{prev}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig4.png}
+  \end{figure}
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Funcionamiento del algoritmo}
+
+  \textbf{Inicia el bucle} $i = 0$, condición $i < k-1$. $k = 5$.
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig4.png}
+  \end{figure}
+
+  Crear \cppinline{post} que sea el nodo al que apunta \cppinline{iter}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig5.png}
+  \end{figure}
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Funcionamiento del algoritmo}
+
+  Hacer que el nodo \cppinline{iter} apunte al nodo \cppinline{prev}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig6.png}
+  \end{figure}
+
+  Mover \cppinline{prev} a \cppinline{iter}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig7.png}
+  \end{figure}
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Funcionamiento del algoritmo}
+
+  Mover \cppinline{iter} a \cppinline{post}.
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig8.png}
+  \end{figure}
+
+  $i = 1$, condición $i < k-1$. $k = 5$. Crear \cppinline{post} que sea el nodo al que apunta \cppinline{iter}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig9.png}
+  \end{figure}
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Funcionamiento del algoritmo}
+
+  Hacer que el nodo \cppinline{iter} apunte al nodo \cppinline{prev}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig10.png}
+  \end{figure}
+
+  Mover \cppinline{prev} a \cppinline{iter}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig11.png}
+  \end{figure}
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Funcionamiento del algoritmo}
+
+  Mover \cppinline{iter} a \cppinline{post}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig12.png}
+  \end{figure}
+
+  $i = 2$, condición $i < k-1$. $k = 5$. Crear \cppinline{post} que sea el nodo al que apunta \cppinline{iter}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig13.png}
+  \end{figure}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Funcionamiento del algoritmo}
+
+  Hacer que el nodo \cppinline{iter} apunte al nodo \cppinline{prev}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig14.png}
+  \end{figure}
+
+  Mover \cppinline{prev} a \cppinline{iter}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig15.png}
+  \end{figure}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Funcionamiento del algoritmo}
+
+  Mover \cppinline{iter} a \cppinline{post}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig16.png}
+  \end{figure}
+
+  $i = 3$, condición $i < k-1$. $k = 5$. Crear \cppinline{post} que sea el nodo al que apunta \cppinline{iter}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig17.png}
+  \end{figure}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Funcionamiento del algoritmo}
+
+  Hacer que el nodo \cppinline{iter} apunte al nodo \cppinline{prev}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig18.png}
+  \end{figure}
+
+  Mover \cppinline{prev} a \cppinline{iter}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig19.png}
+  \end{figure}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Funcionamiento del algoritmo}
+
+  Mover \cppinline{iter} a \cppinline{post}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig20.png}
+  \end{figure}
+
+  $i = 4$, condición $i < k-1$. $k = 5$. \textbf{Finaliza el ciclo}.
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig21.png}
+  \end{figure}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Funcionamiento del algoritmo}
+
+  Hacer que \cppinline{head} apunte a \cppinline{iter}.
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig22.png}
+  \end{figure}
+
+  Hacer que \cppinline{head} sea \cppinline{prev}.
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig23.png}
+  \end{figure}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Funcionamiento del algoritmo}
+
+  La lista entonces se ve:
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/fig24.png}
+  \end{figure}
+
+
+
+\end{frame}
+
 
 
 \section{Implementación En C++}
@@ -135,7 +393,7 @@
 \begin{frame}
   \frametitle{Implementación en C++}
 
- % \scalebox{0.4}{\lstinputlisting[style=cppstyle]{Problema1.cpp}}
+ \scalebox{0.8}{\lstinputlisting[style=cppstyle]{SPPilasColasP2.cpp}}
 
 \end{frame}
 
@@ -147,24 +405,24 @@
   \frametitle{Complejidad temporal y espacial}
 
   \begin{itemize}
-    \item Temporal:
-          \[O(n)\]
-    \item Espacial:
-          \[O(n)\]
+    \item Mayoría de casos $O(k)$. Peor de los casos $k = n$
+          \[
+          O(n)
+          \]
+    \item Espacial, no se crean nuevas estructuras.
+          \[O(1)\]
   \end{itemize}
 
 \end{frame}
 
 
 
+% \section{Referencias}
 
-
-\section{Referencias}
-
-\insertsectionpage
-\begin{frame}[allowframebreaks]{Referencias}
-  \printbibliography
-\end{frame}
+% \insertsectionpage
+% \begin{frame}[allowframebreaks]{Referencias}
+%   \printbibliography
+% \end{frame}
 
 
 \insertendpage
