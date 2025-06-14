@@ -12,6 +12,8 @@ https://youtu.be/eSh55NTIxMg
 
 |   | C++  |  Ruby  |
 |:-:|:-:|:-:|
-| Problema de invertir la lista en un k   | [aquí](https://github.com/ProgramacionCompetitivaUTADEO/Estructuras-De-Datos/tree/main/C%2B%2B/Queue/Ejercicios/SPPilasColasP2)  |   |
-
+| UVa 10071   | [aquí](https://github.com/SegmentationFaultUtadeo/Estructuras-De-Datos/tree/main/C%2B%2B/Problemas/UVa11614EtruscanWarriorsNeverPlayChess)  |   |
+| UVa 11805 | [aquí](https://github.com/SegmentationFaultUtadeo/Estructuras-De-Datos/tree/main/C%2B%2B/Problemas/UVa11805BafanaBafana) | |
+| Kattis - Faktor | [aquí](https://github.com/SegmentationFaultUtadeo/Estructuras-De-Datos/tree/main/C%2B%2B/Problemas/KFaktor) | |
+| Kattis - Planina | [aquí](https://github.com/SegmentationFaultUtadeo/Estructuras-De-Datos/tree/main/C%2B%2B/Problemas/KPlanina) | |
 
